@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Lapis0875&#39;s Blog">
 <meta property="og:description" content="종종 배운 내용들을 정리하고, 작업 내역 및 프로젝트를 게시합니다.">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="http://lapisblog.me/images/og_image.png">
+<meta property="og:image" content="http://lapisblog.me/images/og_image">
 <meta property="article:author" content="Lapis0875">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content=" python">
@@ -33,7 +33,7 @@
 <meta property="article:tag" content=" forge">
 <meta property="article:tag" content=" spigot">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://lapisblog.me/images/og_image.png">
+<meta name="twitter:image" content="http://lapisblog.me/images/og_image">
 <meta name="twitter:creator" content="@sleepylapis">
 <meta name="twitter:site" content="https:&#x2F;&#x2F;twitter.com&#x2F;sleepylapis">
 
@@ -765,7 +765,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -786,35 +786,69 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="/js/main.js" defer></script>
 
     
-    <div class="searchbox ins-search">
-    <div class="searchbox-container ins-search-container">
+    <link rel="stylesheet" href="/css/search.css">
+<div class="searchbox google-cse-search">
+    <div class="searchbox-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+            <input type="text" class="searchbox-input" placeholder="입력 하세요...">
+            <span class="searchbox-close searchbox-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
-        <div class="searchbox-result-wrapper ins-section-wrapper">
-            <div class="ins-section-container"></div>
+        
+        <div class="searchbox-result-wrapper">
+            <gcse:searchresults-only></gcse:searchresults-only>
         </div>
+        
     </div>
+    
+    <script>
+        (function() {
+            var cx = '014428999219532363413:2xsit2hmrjm';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+    
 </div>
 <script>
-    (function (window) {
-        var INSIGHT_CONFIG = {
-            TRANSLATION: {
-                POSTS: '포스트',
-                PAGES: '페이지',
-                CATEGORIES: '카테고리',
-                TAGS: '태그',
-                UNTITLED: '(제목없음)',
-            },
-            CONTENT_URL: '/content.json',
+    (function (document, $) {
+        function debounce(func, wait, immediate) {
+            var timeout;
+            return function() {
+                var context = this, args = arguments;
+                var later = function() {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
         };
-        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-    })(window);
+
+        $(document).on('click', '.navbar-main .search', function () {
+            $('.searchbox').toggleClass('show');
+        }).on('click', '.searchbox .searchbox-mask', function () {
+            $('.searchbox').removeClass('show');
+        }).on('click', '.searchbox-close', function () {
+            $('.searchbox').removeClass('show');
+        }).on('keydown', '.searchbox-input', debounce(function () {
+            var value = $(this).val();
+            try {
+                var element = google.search.cse.element.getElement('searchresults-only0');
+                if (value.trim() === '') {
+                    element.clearAllResults();
+                } else {
+                    element.execute(value);
+                }
+            } catch (e) {}
+        }, 300));
+    })(document, jQuery);
 </script>
-<script src="/js/insight.js" defer></script>
-<link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
     
 </body>
 </html>
