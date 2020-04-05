@@ -8,7 +8,23 @@
     </url>
 
     <url>
-        <loc>http://lapisblog.me/blog/2020/03/Hello-Hexo-md/</loc>
+        <loc>http://lapisblog.me/blog/2020/01/Blog-2020-01-13-AboutArduinoSerialPrintwithVariables/</loc>
+        <lastmod>2020-03-30T15:43:49.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://lapisblog.me/%EB%B8%94%EB%A1%9C%EA%B7%B8/2019/12/Blog-2019-12-31-memoirs/</loc>
+        <lastmod>2020-03-30T15:42:44.426Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://lapisblog.me/uncategorized/2020/03/Hello-Hexo-md/</loc>
         <lastmod>2020-03-24T13:43:07.612Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -16,7 +32,7 @@
     </url>
 
     <url>
-        <loc>http://lapisblog.me/blog/2020/03/hello-world/</loc>
+        <loc>http://lapisblog.me/uncategorized/2020/03/hello-world/</loc>
         <lastmod>2020-03-24T07:59:26.134Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
