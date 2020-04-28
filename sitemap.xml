@@ -4,22 +4,22 @@
 
     <sitemap>
         <loc>http://lapisblog.me/post-sitemap.xml</loc>
-        <lastmod>2020-04-05T11:07:19.002Z</lastmod>
+        <lastmod>2020-04-28T14:25:53.941Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://lapisblog.me/page-sitemap.xml</loc>
-        <lastmod>2020-03-24T13:09:05.778Z</lastmod>
+        <lastmod>2020-04-28T16:36:02.570Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://lapisblog.me/category-sitemap.xml</loc>
-        <lastmod>2020-04-05T11:07:19.002Z</lastmod>
+        <lastmod>2020-04-28T14:25:53.941Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://lapisblog.me/tag-sitemap.xml</loc>
-        <lastmod>2020-04-05T11:07:19.002Z</lastmod>
+        <lastmod>2020-04-28T14:25:53.941Z</lastmod>
     </sitemap>
 
 </sitemapindex>
