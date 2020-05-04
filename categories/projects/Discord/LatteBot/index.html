@@ -200,7 +200,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2분 읽기 (대략 236 단어)
+                    7분 읽기 (대략 1003 단어)
                 </span>
                 
                 
@@ -232,7 +232,42 @@
 <p>채팅청소 : 채팅 채널의 메세지를 주어진 개수만큼 삭제합니다.<br>사용법 : <code>라떼야 관리 채팅청소 (지울 메세지 개수)</code></p>
 </blockquote>
 <p><strong>utils</strong> 모듈 : 유틸리티</p>
+<blockquote>
+<p>핑 : 봇의 응답 지연시간을 보여줍니다.<br>사용법 : <code>라떼야 핑</code></p>
+</blockquote>
+<blockquote>
+<p>유저정보 : 멘션한 유저의 정보(닉네임, 프로필, 디스코드 가입 일자 등) 을 보여줍니다.<br>사용법 : <code>라떼야 유저정보 @멘션</code></p>
+</blockquote>
+<blockquote>
+<p>활동정보 : 멘션한 유저의 활동정보 (디스코드에 표시되는 활동 정보) 를 보여줍니다.<br>사용법 : <code>라떼야 활동정보 @멘션</code></p>
+</blockquote>
+<blockquote>
+<p>서버정보 : 명령어가 사용된 서버의 정보를 보여줍니다.<br>사용법 : <code>라떼야 서버정보</code></p>
+</blockquote>
+<blockquote>
+<p>정보 : 라떼 봇의 정보를 보여줍니다.<br>사용법 : <code>라떼야 정보</code></p>
+</blockquote>
+<blockquote>
+<p>투표 : 일정 기간 진행되는 투표를 게시합니다.<br>사용법 : <code>라떼야 관리 투표 (투표 기간 :시간 단위, 양의 정수) (투표 주제) (투표 설명) (투표 후보)</code><br>주의사항 : 아직은 진행중인 투표의 목록을 확인할 방법이 존재하지 않습니다 :(</p>
+</blockquote>
+<blockquote>
+<p>초대링크 : 라떼 봇을 서버에 초대할 수 있는 링크를 생성합니다.<br>사용법 : <code>라떼야 초대링크</code></p>
+</blockquote>
+<blockquote>
+<p>박제 : 메세지를 임베드 형태로 박제합니다.<br>사용법 : <code>라떼야 박제 (메세지 url)</code></p>
+</blockquote>
+<blockquote>
+<p>제보 : 건의사항이나 버그를 개발자에게 제보합니다.<br>사용법 : <code>라떼야 제보 (건의/버그) (내용)</code> 또는 <code>라떼야 제보</code><br>발견하신 버그들을 제보해주시면 라떼봇의 개선에 도움이 됩니다!<br>라떼봇에 추가되었으면 하는 기능들고 건의해주세요!</p>
+</blockquote>
 <p><strong>auth</strong> 모듈 : 유저 인증</p>
+<blockquote>
+<p>인증 : 라떼봇의 유저 인증 기능을 관리합니다</p>
+<p>[ 활성화 ]<br>라떼봇의 인증을 활성화합니다.<br>현재 사용 가능한 인증 유형은 다음과 같습니다 :<br>(1) 이미지 캡차 : captcha-image<br>이미지 캡차는 알파벳 대/소문자와 숫자, 그리고 몇종의 특수문자를 무작위로 선택해 이미지를 만들어 해당 이미지에 적힌 문자열을 유저가 맞추도록 하는 인증 방식입니다.<br>이미지 캡차를 활성화하기 위해서는 사전에 로그채널과 캡차 문자 길이를 설정해야 합니다. (하단에 설명)<br>사용법 : <code>라떼야 인증 활성화 (인증 유형)</code></p>
+<p>[ 비활성화 ]<br>라떼봇의 인증을 비활성화합니다.<br>사용법 : <code>라떼야 인증 비활성화</code></p>
+<p>[ 캡차 ]<br>CAPTCHA 를 사용한 유저 인증 방식입니다.<br>캡차 인증을 사용하기 전에는 아래의 두가지를 미리 설정해 주어야 합니다.</p>
+<p>{ 로그채널 }<br>캡차의 로그가 기록될 로그채널을 설정합니다.<br>사용법 : <code>라떼야 인증 캡차 로그채널 #채널멘션</code></p>
+<p>{ 문자 길이 }<br>캡차의 문자 길이를 설정합니다.<br>사용법 : <code>라떼야 인증 캡차 문자길이 (자연수)</code><br>주의사항 : 너무 적은 수의 문자는 캡차의 신뢰성을 떨어뜨립니다.</p>
+</blockquote>
 
         </div>
         
@@ -280,8 +315,7 @@
             
         </h1>
         <div class="content">
-            <p><img src="https://img.shields.io/badge/python-3.8-blue.svg?style=flat&logo=Python" alt="Python"><br><img src="https://img.shields.io/badge/discord.py-1.3.2-blue.svg?style=flat&logo=Discord" alt="discord.py"></p>
-<p>라떼는 여러분들의 디스코드에서의 생활을 한층 더 여유롭게, 달달하게 만들어줄 디스코드 봇입니다. 다양한 서버 관리 기능을 제공해 서버를 더 편리하게 관리할 수 있으며, 다양한 유틸리티 기능들이 제공되어 디스코드에서 다양한 활동을 즐기실 수 있습니다 :D</p>
+            <p>라떼는 여러분들의 디스코드에서의 생활을 한층 더 여유롭게, 달달하게 만들어줄 디스코드 봇입니다. 다양한 서버 관리 기능을 제공해 서버를 더 편리하게 관리할 수 있으며, 다양한 유틸리티 기능들이 제공되어 디스코드에서 다양한 활동을 즐기실 수 있습니다 :D</p>
 <h2 id="기능"><a href="#기능" class="headerlink" title="기능"></a>기능</h2><ol>
 <li><p>서버 관리 기능 [Done &amp; Can be Updated]<br>멤버 추방, 차단, 차단해제, 뮤트 및 경고 등 멤버 관리 기능과 채팅청소, 투표, 유저 인증 등 편리한 관리 기능들을 제공합니다.</p>
 </li>
@@ -298,7 +332,7 @@
 <li><p>언어 기능[Plan]<br>보다 더 많은 사람들을 지원하기 위해, 다양한 언어로 라떼봇이 동작할 수 있게 합니다.</p>
 </li>
 </ol>
-<h2 id="개발-환경"><a href="#개발-환경" class="headerlink" title="개발 환경"></a>개발 환경</h2><p>Python 3.8<br>discord.py 1.3.2</p>
+<h2 id="개발-환경"><a href="#개발-환경" class="headerlink" title="개발 환경"></a>개발 환경</h2><p><img src="https://img.shields.io/badge/python-3.8-blue.svg?style=flat&logo=Python" alt="Python"><br><img src="https://img.shields.io/badge/discord.py-1.3.2-blue.svg?style=flat&logo=Discord" alt="discord.py"><br>Python 3.8<br>discord.py 1.3.2</p>
 <h2 id="봇-개발에-도움을-준-사람들"><a href="#봇-개발에-도움을-준-사람들" class="headerlink" title="봇 개발에 도움을 준 사람들"></a>봇 개발에 도움을 준 사람들</h2><p><strong>khk4912(BGM)</strong> : 봇의 로그가 두번 출력되는 오류를 해결해 주셨습니다!<br><strong>HOREON</strong> : 봇의 일본어 번역을 맡아주셨습니다!<br><strong>당신</strong> : 라떼봇을 사용해 주시고, 테스트를 해주셨습니다!</p>
 <p>라떼봇은 아직 베타 테스트 단계이므로, 다양한 오류나 예상치 못한 동작을 보일 수 있습니다. 이런 경우들은 봇을 통해 제보해 주시면 감사하겠습니다!</p>
 
@@ -363,7 +397,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            5
+                            4
                         </p>
                     </a>
                 </div>
@@ -582,25 +616,6 @@
         
         <article class="media">
             
-            <a href="/uncategorized/2020/03/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-25T03:55:46.834Z">2020-03-25</time></div>
-                    <a href="/uncategorized/2020/03/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/Blog/2020/01/Blog-Arduino-SerialPrint-with-Variables/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Arduino에서 Serial을 사용해 출력할 때, 문자열과 변수의 값을 코드 한 줄로 출력하는 방법">
@@ -655,17 +670,6 @@
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2020/03/">
-                <span class="level-start">
-                    <span class="level-item">3월 2020</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -851,25 +855,6 @@
         
         <article class="media">
             
-            <a href="/uncategorized/2020/03/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-25T03:55:46.834Z">2020-03-25</time></div>
-                    <a href="/uncategorized/2020/03/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/Blog/2020/01/Blog-Arduino-SerialPrint-with-Variables/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Arduino에서 Serial을 사용해 출력할 때, 문자열과 변수의 값을 코드 한 줄로 출력하는 방법">
@@ -924,17 +909,6 @@
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2020/03/">
-                <span class="level-start">
-                    <span class="level-item">3월 2020</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
